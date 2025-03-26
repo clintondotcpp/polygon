@@ -1,0 +1,54 @@
+yarn create next-app .
+nest new . //nestjs if nestjs is installed globally
+yarn add --dev hardhat //Installs hardhat
+
+yarn add --dev @nomicfoundation/hardhat-toolbox hardhat-deploy hardhat-ethers hardhat-etherscan dotenv [
+These plugins will help with Solidity compilation, testing, contract verification, and deployment.
+
+@nomicfoundation/hardhat-toolbox → Includes Hardhat essentials like ethers, chai, and solc
+
+hardhat-deploy → Simplifies deployments
+
+hardhat-ethers → Integrates Ethers.js
+
+hardhat-etherscan → Automates contract verification on Etherscan
+
+dotenv → Loads private environment variables
+
+]
+
+yarn add --dev @openzeppelin/contracts @openzeppelin/contracts-upgradeable hardhat-upgrades [
+    ✅ Use @openzeppelin/contracts-upgradeable for core market logic
+✅ Use @openzeppelin/contracts for ERC20 tokens and immutable contracts (e.g., utility contracts like math or access control)
+]
+
+yarn add --dev chai mocha @nomiclabs/hardhat-waffle ethereum-waffle [
+    Unit and integration tests
+
+    chai & mocha → Testing framework
+    @nomiclabs/hardhat-waffle & ethereum-waffle → Ethers.js test utilities
+
+
+]
+
+yarn add --dev hardhat-gas-reporter[
+    Gas usage analysis
+]
+
+yarn add --dev typescript ts-node @typechain/hardhat typechain @nomiclabs/hardhat-ethers [
+    Add TypeScript
+]
+
+yarn add --dev @chainlink/contracts hardhat [
+    You should install Chainlink if your market requires external, tamper-proof data, such as:
+
+Sports betting → Fetches real-time scores or match results.
+
+Crypto price predictions → Uses Chainlink price feeds for accurate token prices.
+
+Election results → Verifies outcomes from a trusted news API.
+
+Randomized outcomes → Uses Chainlink VRF (Verifiable Random Function) for fairness.
+
+Automated settlements → Uses Chainlink Automation (Keepers) to execute payouts when conditions are met.
+]

@@ -1,0 +1,39 @@
+prediction-market/
+│── frontend/                # Next.js frontend (React, TypeScript)
+│   ├── components/          # Reusable UI components
+│   ├── hooks/               # Custom React hooks (useWallet, useMarket, etc.)
+│   ├── pages/               # Next.js pages (Home, Markets, Profile)
+│   ├── utils/               # Helper functions (formatting, contract calls)
+│   ├── contracts/           # Frontend contract ABIs & interaction
+│   ├── public/              # Static assets (logos, icons)
+│   ├── styles/              # Tailwind or CSS modules
+│   ├── config.ts            # Configurations (RPC, contract addresses)
+│   ├── app.tsx              # Root component
+│   ├── package.json         # Dependencies
+│   ├── tsconfig.json        # TypeScript config
+│── backend/                 # NestJS backend (API, DB, event tracking)
+│   ├── src/                 
+│   │   ├── market/          # Market module (CRUD, settlements)
+│   │   ├── users/           # User module (profiles, authentication)
+│   │   ├── oracle/          # Oracle module (resolves market outcomes)
+│   │   ├── db/              # Prisma/PostgreSQL ORM
+│   │   ├── utils/           # Helpers (web3 interaction, API calls)
+│   │   ├── main.ts          # Main entry file
+│   │   ├── app.module.ts    # Root module
+│   ├── package.json         # Dependencies
+│   ├── tsconfig.json        # TypeScript config
+│── smart-contracts/         # Solidity contracts (Polygon)
+│   ├── contracts/           
+│   │   ├── MarketFactory.sol  # Deploys new prediction markets
+│   │   ├── PredictionMarket.sol  # Main market contract (bets, settlements)
+│   │   ├── Oracle.sol        # Chainlink or UMA oracle integration
+│   │   ├── Token.sol         # Optional ERC20 token (market currency)
+│   ├── scripts/              # Deployment & verification scripts
+│   ├── test/                 # Hardhat tests
+│   ├── deploy/               # Deployment configurations
+│   ├── hardhat.config.ts     # Hardhat configuration
+│   ├── package.json          # Dependencies
+│   ├── README.md             # Instructions
+│── .env                      # Environment variables (RPC keys, DB)
+│── README.md                 # Project documentation
+│── docker-compose.yml        # Optional: DB + backend in Docker
